@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理測驗小遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 显示分数的元素 -->
+    <div id="scoreDisplay"></div>
+
+    <script>
+        // 从 LocalStorage 中获取分数
+        var score = localStorage.getItem('score');
+
+        // 如果分数不存在，则初始化为 0 或者其他默认值
+        if (score === null) {
+            score = 0;
+            localStorage.setItem('score', score); // 将分数初始化为 0 并保存到 LocalStorage
+        }
+
+        // 显示分数在页面上
+        var scoreDisplayElement = document.getElementById('scoreDisplay');
+        scoreDisplayElement.innerText = 'Score: ' + score;
+    </script>
+</body>
+</html>
