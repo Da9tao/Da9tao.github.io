@@ -31,17 +31,17 @@
         }
         #image2 {
         position: absolute;
-            top: 80%; 
+            top: 75%; 
             left: 70%; 
-            transform: translate(-50%, -50%); 
+            transform: translate(-50%, 0%); 
             max-width: 20%;
         }
 
         #image3 {
         position: absolute;
-            top: 80%; 
+            top: 75%; 
             right: 70%; 
-            transform: translate(50%, -50%); 
+            transform: translate(50%, 0%); 
             max-width: 20%;
         }
         #image4 {
@@ -76,10 +76,13 @@
 
     </div>
     <script>
+        // 初始化分数为 0
         var score = 0;
+    
+        // 点击图片增加分数
         function increaseScore() {
-            score += 1;
-            sessionStorage.setItem('score', score);
+            score += 1; // 分数加 1
+            localStorage.setItem('score', score); // 将分数保存到 localStorage
         }
     </script>
 </body>
