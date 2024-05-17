@@ -5,8 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>心理測驗小遊戲</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #29537b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .image-container {
+           display: flex;
+           justify-content: center;
+           padding-top: 46.153%%;
+           overflow: hidden;
+        }
+        .image-container img {
+            position: absolute;
+            height: auto;
+            object-fit: cover;
+        }
+        #image1 {
+            top:20%;
+            max-width: 100%;
+            margin: auto;
+            display: block; 
+        }
+        #image2 {
+            top: 53%; 
+            left: 63%;
+            max-width:5%;
+        }
+        #image3 {
+            bottom: 35%; 
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: 25%;
+            cursor: pointer;
+        }
+        #image4 {
+            bottom: 0;
+            max-width: 60%;
+        }
+        
+        #image5 {
+            top: 0;
+            max-width: 100%;
+        }
+        
+        #image6 {
+            bottom: 0;
+            max-width: 100%;
+        }
+    </style>
 </head>
-<body style="background-image: url('images/01.jpg'); background-size: cover; background-repeat: no-repeat;">
-   
+<body>
+    <div class="image-container">
+        <img id="image1" src="images/cover1.png" alt="Cover Image 1">
+        <img id="image2" src="images/cover2.png" alt="Cover Image 2">
+        <a href="p1.html">
+        <img id="image3" src="images/cover3.png" alt="Cover Image 3">
+        </a>
+        <img id="image4" src="images/cover4.png" alt="Cover Image 4">
+        <img id="image5" src="images/cover5.png" alt="Cover Image 5">
+        <img id="image6" src="images/cover6.png" alt="Cover Image 6">
+
+    </div>
 </body>
 </html>
