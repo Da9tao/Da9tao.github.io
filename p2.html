@@ -31,7 +31,7 @@
         }
         #image2 {
         position: absolute;
-            top: 90%; 
+            top: 80%; 
             left: 70%; 
             transform: translate(-50%, -50%); 
             max-width: 20%;
@@ -39,7 +39,7 @@
 
         #image3 {
         position: absolute;
-            top: 90%; 
+            top: 80%; 
             right: 70%; 
             transform: translate(50%, -50%); 
             max-width: 20%;
@@ -53,6 +53,11 @@
             top: 0;
             max-width: 100%;
         }
+        #image6 {
+            bottom: 0;
+            max-width: 100%;
+            z-index: -1;
+        }
         
     </style>
 </head>
@@ -63,11 +68,19 @@
         <img id="image2" src="images/q2_2.png" alt="Cover Image 2">
         </a>
         <a href="p3.html">
-        <img id="image3" src="images/q2_3.png" alt="Cover Image 3">
+        <img id="image3" src="images/q2_3.png" alt="Cover Image 3 onclick="increaseScore()">
         </a>
         <img id="image4" src="images/2.gif" alt="Cover Image 4">
         <img id="image5" src="images/cover5.png" alt="Cover Image 5">
+        <img id="image6" src="images/cover6.png" alt="Cover Image 6">
 
     </div>
+    <script>
+        var score = 0;
+        function increaseScore() {
+            score += 1;
+            sessionStorage.setItem('score', score);
+        }
+    </script>
 </body>
 </html>
