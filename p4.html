@@ -75,11 +75,12 @@
         <img id="image6" src="images/cover6.png" alt="Cover Image 6">
     </div>
     <script>
-        var score = sessionStorage.getItem('score');
+        var score = localStorage.getItem('score');
         function increaseScore() {
-            score += 1;
-            sessionStorage.setItem('score', score);
-        }
+        score += 1;
+        localStorage.setItem('score', score);
+    }    
     </script>
+
 </body>
 </html>
