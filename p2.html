@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理測驗小遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #eda677;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .image-container {
+           display: flex;
+           justify-content: center;
+        }
+        .image-container img {
+            position: absolute;
+            height: auto;
+        }
+        #image1 {
+            top:15%;
+            max-width: 50%;
+            margin: auto;
+            display: block; 
+        }
+        #image2 {
+        position: absolute;
+            top: 75%; 
+            left: 70%; 
+            transform: translate(-50%, 0%); 
+            max-width: 20%;
+        }
+
+        #image3 {
+        position: absolute;
+            top: 75%; 
+            right: 70%; 
+            transform: translate(50%, 0%); 
+            max-width: 20%;
+        }
+        #image4 {
+            top: 35%;
+            max-width: 100%;
+        }
+        
+        #image5 {
+            top: 0;
+            max-width: 100%;
+        }
+        #image6 {
+            bottom: 0;
+            max-width: 100%;
+            z-index: -1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="image1" src="images/q2_1.png" alt="Cover Image 1">
+        <a href="p3.html">
+        <img id="image2" src="images/q2_2.png" alt="Cover Image 2">
+        </a>
+        <a href="p3.html">
+        <img id="image3" src="images/q2_3.png" alt="Cover Image 3" onclick="increaseScore()">
+        </a>
+        <img id="image4" src="images/2.gif" alt="Cover Image 4">
+        <img id="image5" src="images/cover5.png" alt="Cover Image 5">
+        <img id="image6" src="images/cover6.png" alt="Cover Image 6">
+
+    </div>
+    <script>
+        var score = localStorage.getItem('score');
+        function increaseScore() {
+            score = (parseInt(score) + 1).toString();
+            localStorage.setItem('score', score);
+        }
+    </script>
+</body>
+</html>
