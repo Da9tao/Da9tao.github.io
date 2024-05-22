@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心理測驗小遊戲</title>
+    <title>測測你是哪種狗狗</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -64,11 +64,11 @@
 <body>
     <div class="image-container">
         <img id="image1" src="images/q12_1.png" alt="Cover Image 1">
-        <a href="p12.html">
-        <img id="image2" src="images/q12_2.png" alt="Cover Image 2" onclick="increaseScore()">
+        <a href="#" id="image2-link">
+            <img id="image2" src="images/q12_2.png" alt="Cover Image 2">
         </a>
-        <a href="p12.html">
-        <img id="image3" src="images/q12_3.png" alt="Cover Image 3"  >
+        <a href="#" id="image3-link">
+            <img id="image3" src="images/q12_3.png" alt="Cover Image 3">
         </a>
         <img id="image4" src="images/12.gif" alt="Cover Image 4">
         <img id="image5" src="images/cover5.png" alt="Cover Image 5">
@@ -79,8 +79,30 @@
         function increaseScore() {
             score = (parseInt(score) + 1).toString();
             localStorage.setItem('score', score);
+            navigateBasedOnScore();
     
     }    
+        function navigateBasedOnScore() {
+                var scoreValue = parseInt(score);
+                if (scoreValue >= 0 && scoreValue <= 3) {
+                    window.location.href = 'p13.html';
+                } else if (scoreValue >= 4 && scoreValue <= 6) {
+                    window.location.href = 'p14.html';
+                } else if (scoreValue >= 7 && scoreValue <= 9) {
+                    window.location.href = 'p15.html';
+                } else if (scoreValue >= 10 && scoreValue <= 12) {
+                    window.location.href = 'p16.html';
+                }
+            }
+         document.getElementById('image2-link').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            increaseScore();
+        });
+
+        document.getElementById('image3-link').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            navigateBasedOnScore();
+        });
     </script>
 
 </body>
