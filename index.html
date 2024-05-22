@@ -13,15 +13,17 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
             overflow: hidden; /* 防止页面出现滚动条 */
         }
         .image-container {
             position: relative;
-            width: 100vw; /* 使用视口宽度 */
-            height: 100vh; /* 使用视口高度 */
+            width: 100%;
+            height: 100%;
         }
         .image-container img {
             position: absolute;
+            height: auto;
             object-fit: cover;
         }
         #image1 {
@@ -32,7 +34,7 @@
         }
         #image3 {
             bottom: 30%;
-            right: 26%;
+            right: 26%; 
             max-width: 40%;
         }
         #image4 {
@@ -66,5 +68,14 @@
         <img id="image5" src="images/cover5.png" alt="Cover Image 5">
         <img id="image6" src="images/cover6.png" alt="Cover Image 6">
     </div>
+    <script>
+        function adjustViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        adjustViewportHeight();
+        window.addEventListener('resize', adjustViewportHeight);
+    </script>
 </body>
 </html>
