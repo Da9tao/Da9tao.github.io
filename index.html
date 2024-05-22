@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>測測你是哪種狗狗</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -11,61 +11,60 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height:100vh;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden; 
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* 防止页面出现滚动条 */
         }
         .image-container {
             position: relative;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw; /* 使用视口宽度 */
+            height: 100vh; /* 使用视口高度 */
         }
         .image-container img {
             position: absolute;
-            height: auto;
             object-fit: cover;
-            
         }
         #image1 {
-            top:25%;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
             max-width: 70%;
-             
         }
         #image3 {
             bottom: 30%;
-            right:26%; 
+            right: 26%;
             max-width: 40%;
-
         }
         #image4 {
             bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             max-width: 70%;
         }
-        
         #image5 {
             top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             max-width: 100%;
         }
-        
         #image6 {
             bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             max-width: 100%;
             z-index: -1;
         }
-        
     </style>
 </head>
 <body>
     <div class="image-container">
         <img id="image1" src="images/cover1.png" alt="Cover Image 1">
         <a href="p1.html">
-        <img id="image3" src="images/cover3.png" alt="Cover Image 3">
+            <img id="image3" src="images/cover3.png" alt="Cover Image 3">
         </a>
         <img id="image4" src="images/cover4.png" alt="Cover Image 4">
         <img id="image5" src="images/cover5.png" alt="Cover Image 5">
         <img id="image6" src="images/cover6.png" alt="Cover Image 6">
-
     </div>
 </body>
 </html>
