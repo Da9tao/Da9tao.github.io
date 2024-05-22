@@ -11,61 +11,59 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* 设置整个页面高度为视口高度 */
-            margin: 0; /* 移除页面默认的边距 */
-            overflow: hidden; /* 防止页面出现滚动条 */
+            height:100vh;
+            margin: 0 auto;
+            position: relative;
         }
         .image-container {
-            position: relative; /* 保持相对定位 */
-            max-width: 100%; /* 设置最大宽度 */
-            height: 100%; /* 设置高度为视口高度 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+           display: flex;
+           justify-content: center;
         }
         .image-container img {
-            max-width: 100%; /* 设置最大宽度 */
-            height: auto; /* 根据比例自动调整高度 */
-            object-fit: cover; /* 保持图片比例并覆盖整个容器 */
+            position: absolute;
+            height: auto;
+            object-fit: cover;
+            
         }
         #image1 {
-            position: absolute; /* 使用绝对定位 */
-            top: 25%; /* 调整位置 */
+            top:25%;
             max-width: 70%;
+             
         }
         #image3 {
-            position: absolute; /* 使用绝对定位 */
-            bottom: 30%; /* 调整位置 */
-            right: 26%;
+            bottom: 30%;
+            right:26%; 
             max-width: 40%;
+
         }
         #image4 {
-            position: absolute; /* 使用绝对定位 */
-            bottom: 0; /* 调整位置 */
+            bottom: 0;
             max-width: 70%;
         }
+        
         #image5 {
-            position: absolute; /* 使用绝对定位 */
-            top: 0; /* 调整位置 */
+            top: 0;
             max-width: 100%;
         }
+        
         #image6 {
-            position: absolute; /* 使用绝对定位 */
-            bottom: 0; /* 调整位置 */
+            bottom: 0;
             max-width: 100%;
             z-index: -1;
         }
+        
     </style>
 </head>
 <body>
     <div class="image-container">
         <img id="image1" src="images/cover1.png" alt="Cover Image 1">
         <a href="p1.html">
-            <img id="image3" src="images/cover3.png" alt="Cover Image 3">
+        <img id="image3" src="images/cover3.png" alt="Cover Image 3">
         </a>
         <img id="image4" src="images/cover4.png" alt="Cover Image 4">
         <img id="image5" src="images/cover5.png" alt="Cover Image 5">
         <img id="image6" src="images/cover6.png" alt="Cover Image 6">
+
     </div>
 </body>
 </html>
