@@ -1,12 +1,11 @@
 @media (max-width: 576px) {
     :root {
-        --vh: 1vh;
+        --image-container-height: calc(var(--vh, 1vh) * 100);
+        --image-container-width: 100vw;
     }
 
-    body {
-        height: calc(var(--vh) * 100);
-        width: 100vw;
-        margin: 0;
-        padding: 0;
+    .image-container {
+        height: var(--image-container-height);
+        width: var(--image-container-width);
     }
 }
