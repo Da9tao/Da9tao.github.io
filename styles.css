@@ -1,0 +1,12 @@
+@media (max-width: 576px) {
+    :root {
+        --vh: 1vh;
+    }
+
+    body {
+        height: calc(var(--vh) * 100);
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+}
