@@ -1,11 +1,25 @@
+:root {
+    --phone-frame-margin-x: 16px;
+    --phone-frame-margin-top: 92px;
+    --game-frame-height: calc(100vh - 80px);
+    --game-frame-width: min(100vw, 375px);
+}
+
 @media (max-width: 576px) {
-    :root {
-        --image-container-height: calc(var(--vh, 1vh) * 100);
-        --image-container-width: 100vw;
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* 防止滾動條出現 */
     }
 
     .image-container {
-        height: var(--image-container-height);
-        width: var(--image-container-width);
+        height: var(--game-frame-height);
+        width: var(--game-frame-width);
+        margin: var(--phone-frame-margin-top) auto 0; 
+        max-width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 }
