@@ -17,6 +17,7 @@
         width: var(--game-frame-width);
         margin: var(--phone-frame-margin-top) auto 0;
         max-width: 100%;
+        background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
