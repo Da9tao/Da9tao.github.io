@@ -11,16 +11,21 @@
         padding: 0;
         overflow-x: hidden; 
     }
-
+    .outer-container {
+            height: var(--game-frame-height);
+            width: var(--game-frame-width);
+            margin: var(--phone-frame-margin-top) auto 0;
+            max-width: 100%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Keeps the outer container fixed size */
+        }
     .image-container {
-        height: var(--game-frame-height); 
-        width: var(--game-frame-width);
-        margin: var(--phone-frame-margin-top) auto 0;
-        max-width: 100%;
+        width: 100%;
+        max-height: 100%; /* Ensures it doesn't grow larger than the parent */
+        overflow: auto;
         background-color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: auto; 
     }
 }
